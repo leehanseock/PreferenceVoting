@@ -41,9 +41,12 @@ public class MainActivity extends AppCompatActivity {
             imgv[index].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    voteCount[index]++;
-                    Toast.makeText(getApplicationContext(), imgName[index] + ": 총 " + voteCount[index] + "표", Toast.LENGTH_SHORT).show();
-
+                    if (voteCount[index] < 5) {
+                        voteCount[index]++;
+                        Toast.makeText(getApplicationContext(), imgName[index] + ": 총 " + voteCount[index] + "표", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "5표까지만 투표할 수 있습니다.", Toast.LENGTH_SHORT).show();
+                    }
                 }
             });
         }
