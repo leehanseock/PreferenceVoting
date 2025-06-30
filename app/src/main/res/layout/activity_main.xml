@@ -95,6 +95,7 @@
             android:layout_margin="1dp"
             android:src="@drawable/k9"/></LinearLayout>
     <Button
+        android:id="@+id/btnDone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
